@@ -9,10 +9,15 @@ import SwiftUI
 
 struct LoadingView: View {
     var body: some View {
-        ProgressView().progressViewStyle(CircularProgressViewStyle(tint: .white)).frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: .infinity)
+        ProgressView().progressViewStyle(CircularProgressViewStyle(tint: .white))
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.black) // Menambahkan latar belakang hitam
+            .foregroundColor(.white) // Mengatur warna teks menjadi putih
     }
 }
 
-#Preview {
-    LoadingView()
+struct LoadingView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoadingView()
+    }
 }
